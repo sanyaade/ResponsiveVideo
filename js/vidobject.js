@@ -90,6 +90,9 @@
 				var flashvars = {
                     video: videoSource,
 					width: width,
+					buttonColor: plugin.settings.buttonColor,
+					accentColor: plugin.settings.accentColor,
+					backgroundColor: plugin.settings.backgroundColor,
 					enableFullScreen: plugin.settings.fullScreen,
 					container: 'vidobject-container-'+voIndex
                 };

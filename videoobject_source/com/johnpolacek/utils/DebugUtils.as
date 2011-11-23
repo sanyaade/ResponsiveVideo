@@ -1,1 +1,0 @@
-﻿package com.johnpolacek.utils {		import flash.external.ExternalInterface;				public class DebugUtils {				/** Removes all children of target sprite. */			public static function consoleLog(logMessage:String):void		{			if (ExternalInterface.available) ExternalInterface.call("console.log", logMessage);		}	}}

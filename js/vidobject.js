@@ -53,7 +53,6 @@
 			vidObjects.push(e.ref);
 			videoContainers.push($(e.ref).parent());
 		}
-
         
         plugin.embed = function() {
             for (var i = 0; i<arguments.length; i++) {
@@ -93,8 +92,7 @@
 					buttonColor: plugin.settings.buttonColor,
 					accentColor: plugin.settings.accentColor,
 					backgroundColor: plugin.settings.backgroundColor,
-					enableFullScreen: plugin.settings.fullScreen,
-					container: 'vidobject-container-'+voIndex
+					enableFullScreen: plugin.settings.fullScreen
                 };
                 
                 if (poster) {

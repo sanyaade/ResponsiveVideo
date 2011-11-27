@@ -4,10 +4,10 @@
 	
 	<meta charset='utf-8'>
 	
-	<title>Responsive Video Object on GitHub</title>
+	<title>Responsive Video jQuery Plugin on GitHub</title>
 	
-	<meta name="title" content="jQuery Responsive Video Object Plugin">
-	<meta name="description" content="jQuery Responsive Video Object Plugin on Github, developed by John Polacek. ">
+	<meta name="title" content="jQuery Responsive Video Plugin">
+	<meta name="description" content="jQuery Responsive Video Plugin on Github, developed by John Polacek. ">
 	
 	<meta name="author" content="John Polacek">
 	
@@ -20,14 +20,14 @@
 </head>
 
 <body>
-	<a href="https://github.com/johnpolacek/Responsive-Video-Object">
+	<a href="https://github.com/johnpolacek/ResponsiveVideo">
 		<img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" />
 	</a>
 	
 	<div id="wrapper">
 		
 		<h1>
-			<a href="https://github.com/johnpolacek/Responsive-Video-Object">Responsive Video Object</a><br />
+			<a href="https://github.com/johnpolacek/ResponsiveVideo">Responsive Video</a><br />
 		</h1>
 		<h2>by <a href="http://johnpolacek.github.com">johnpolacek</a></h2>
 		
@@ -50,12 +50,12 @@
     &lt;source src="vid/video.mp4" type="video/mp4"  /&gt;
   &lt;/video&gt;
 &lt;/div&gt;</pre></blockquote></p>
-			<p>First, link to jQuery and then to vidobject.js. Next, create a new vidobject and apply any custom settings to it. Last, use vidobject to target the video element(s) on the page.</p>
+			<p>First, link to jQuery and then to responsiveVideo.js. Next, instantiate the plugin and apply any custom settings to it. Last, use the plugin to target the video element(s) on the page.</p>
 			<p><blockquote><pre>
 &lt;script src="http://code.jquery.com/jquery-1.7.min.js"&gt;&lt;/script&gt;
-&lt;script src="js/vidobject.js"&gt;&lt;/script&gt;
+&lt;script src="js/responsivevideo.js"&gt;&lt;/script&gt;
 &lt;script&gt;
-  var vidobject = new $.vidobject({
+  var responsiveVideo = new $.responsiveVideo({
     player: 'swf/vidobject.swf',
     buttonColor: '#FFFFFF',
     accentColor: '#BBBBBB',
@@ -63,7 +63,7 @@
     scaleVideo: true,
     fullScreen: true
   });
-  vidobject.embed("myVideo");
+  responsiveVideo.embed("myVideo");
 &lt;/script&gt;</pre></blockquote></p>
 			
 			<p>Parameters are:</p>
@@ -79,8 +79,8 @@
 		
 		<p class="download">
 			Download Plugin: 
-			<a class="download download-link" href="https://github.com/johnpolacek/Responsive-Video-Object/zipball/master">zip</a>
-			<a class="download download-link" href="https://github.com/johnpolacek/Responsive-Video-Object/tarball/master">tar</a>
+			<a class="download download-link" href="https://github.com/johnpolacek/ResponsiveVideo/zipball/master">zip</a>
+			<a class="download download-link" href="https://github.com/johnpolacek/ResponsiveVideo/tarball/master">tar</a>
 		</p>
 		
 		<p class="github">
@@ -99,9 +99,9 @@
 	
 	<!-- JavaScript -->
 	<script src="http://code.jquery.com/jquery-1.7.min.js"></script>
-	<script src="js/vidobject.js"></script>
+	<script src="js/responsivevideo.js"></script>
 	<script>
-		var vidobject = new $.vidobject({
+		var responsiveVideo = new $.responsiveVideo({
 			player: 'swf/vidobject.swf',
 			buttonColor: '#FFFFFF',
 			accentColor: '#BBBBBB',
@@ -109,7 +109,7 @@
 			scaleVideo: true,
 			fullScreen: true
 		});
-		vidobject.embed("myVideo");
+		responsiveVideo.embed("myVideo");
 	</script>
 	
 	<script type="text/javascript">

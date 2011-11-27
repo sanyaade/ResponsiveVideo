@@ -16,7 +16,8 @@
         
 		// if (swfobject.hasFlashPlayerVersion("9")) {}  <--- Flash Player detection 
 		
-		var videoContainers = [];
+		var videoContainers = []; // swfobject containers
+		var videoElements = []; // html5 vid elements (if no flash)
 		var vidObjects = [];
 		var voIndex = 0;
 		var aspectRatio = 9/16;
@@ -47,11 +48,21 @@
 				$('#vidobject'+i).height(videoContainers[i].width() * aspectRatio);
 				videoContainers[i].height(videoContainers[i].width() * aspectRatio);
 			}
+			for (var i = 0; i<videoElements.length; i++) {
+				videoElements[i].width(videoElements[i].parent().width());
+				videoElements[i].height(videoElements[i].width() * aspectRatio);
+				videoElements[i].parent().css('height',videoElements[i].width() * aspectRatio);
+			}
         }
 		
 		function onEmbed(e) {
-			vidObjects.push(e.ref);
-			videoContainers.push($(e.ref).parent());
+			if (e.success) {
+				vidObjects.push(e.ref);
+				videoContainers.push($(e.ref).parent());
+			} else {
+				// handle no flash
+				videoElements.push(e.id);
+			}
 		}
         
         plugin.embed = function() {
@@ -82,10 +93,13 @@
 					height = width * aspectRatio;
 				}
 				
-				videoEl.parent()
-					.css('height', width * aspectRatio)
-					.addClass('vidobject-container-'+voIndex);
+				videoEl.width(videoEl.parent().width());
+				videoEl.height(videoEl.width() * aspectRatio);
 				
+				videoEl.parent()
+					.css('height',videoEl.width() * aspectRatio)
+					.addClass('vidobject-container-'+voIndex);
+					
 				var flashvars = {
                     video: videoSource,
 					width: width,

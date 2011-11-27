@@ -1,4 +1,4 @@
-#Responsive Video Object
+#Responsive Video
 
 jQuery Plugin for a video player that scales to fit its container
 

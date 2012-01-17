@@ -48,9 +48,7 @@
 				$('#vidobject'+i).height(videoContainers[i].width() * aspectRatio);
 				videoContainers[i].height(videoContainers[i].width() * aspectRatio);
 			}
-			for (var i = 0; i<videoElements.length; i++) {
-				videoElements[i].parent().css('height','0');
-			}
+			$('video').parent().css('height','0');
         }
 		
 		function onEmbed(e) {

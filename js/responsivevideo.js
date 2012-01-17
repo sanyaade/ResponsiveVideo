@@ -48,7 +48,10 @@
 				$('#vidobject'+i).height(videoContainers[i].width() * aspectRatio);
 				videoContainers[i].height(videoContainers[i].width() * aspectRatio);
 			}
-			$('video').parent().css('height','0');
+			for (var i = 0; i<videoElements.length; i++) {
+				var container = videoElements[i].parent();
+				container.css('height',container.width()*aspectRatio);
+			};
         }
 		
 		function onEmbed(e) {
@@ -57,7 +60,7 @@
 				videoContainers.push($(e.ref).parent());
 			} else {
 				// handle no flash
-				videoElements.push(e.id);
+				videoElements.push($('#'+e.id));
 			}
 		}
         

@@ -49,10 +49,9 @@
 				videoContainers[i].height(videoContainers[i].width() * aspectRatio);
 			}
 			for (var i = 0; i<videoElements.length; i++) {
-				videoElements[i].width(videoElements[i].parent().width());
-				videoElements[i].height(videoElements[i].width() * aspectRatio);
-				videoElements[i].parent().css('height',videoElements[i].width() * aspectRatio);
-			}
+				var container = videoElements[i].parent();
+				container.css('height',container.width()*aspectRatio);
+			};
         }
 		
 		function onEmbed(e) {
@@ -61,7 +60,8 @@
 				videoContainers.push($(e.ref).parent());
 			} else {
 				// handle no flash
-				videoElements.push(e.id);
+				console.log($('#'+e.id));
+				videoElements.push($('#'+e.id));
 			}
 		}
         
@@ -93,8 +93,8 @@
 					height = width * aspectRatio;
 				}
 				
-				videoEl.width(videoEl.parent().width());
-				videoEl.height(videoEl.width() * aspectRatio);
+				videoEl.css('width','100%')
+				videoEl.css('height','auto');
 				
 				videoEl.parent()
 					.css('height',videoEl.width() * aspectRatio)

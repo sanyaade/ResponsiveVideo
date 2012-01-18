@@ -1,6 +1,4 @@
 body {
-    background-color: #eee;
-    background-image: url('../img/bright_squares.png');
     color: #333;
     padding: 0;
     margin: 0;
@@ -11,15 +9,12 @@ body {
     margin: 0 auto;
     padding: 40px 40px 30px;
     width: 75%;
-    background: #fff;
     text-align: center;
-    border-left: solid 1px #ddd;
-    border-right: solid 1px #ddd;
 }
 
 #container {
 	width: 90%;
-	background-color: #999;
+	background-color: #111;
 	margin: 0 auto;
 }
 
@@ -98,7 +93,7 @@ pre {
 
 .download, .github, .authors {
     margin: 40px 0 20px;
-    font-size: 18px;
+    font-size: 14px;
     font-style: italic;
     
 }
@@ -127,18 +122,5 @@ pre {
 }
 
 @media screen and (max-width: 480px) {
-    .guide, .download {
-        display: none;
-    }
     
-    .footer {
-        margin-top: 30px;
-    }
-	
-    .footer a, footer a:visited {
-        font-size: 28px;
-        font-style: italic;
-        line-height: 1.6;
-        padding: 14px;
-    }
 }

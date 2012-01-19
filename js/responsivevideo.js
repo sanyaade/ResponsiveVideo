@@ -122,8 +122,7 @@
 				
 				var attributes = {
 					id: 'vidobject'+voIndex,
-					name: 'vidobject'+voIndex,
-					class: 'vidobject'
+					name: 'vidobject'+voIndex
 				}
 				
                 swfobject.embedSWF(plugin.settings.player, videoID, '100%', '100%', "9.0.0", false, flashvars, params, attributes, onEmbed);

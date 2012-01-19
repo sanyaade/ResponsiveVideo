@@ -36,9 +36,21 @@
             
             plugin.settings = $.extend({}, defaults, options);
             
-            $(window).resize(function(e) {
-                updateSize();
-            });
+			if (plugin.settings.scaleVideo) {
+				var didResize = false;
+				
+				$(window).resize(function(e) {
+					didResize = true; 
+				});
+				
+				setInterval(function(){ 
+					if (didResize){
+						updateSize();
+						didResize = false;
+					}				
+				}, 100);
+				
+			}
 			
         }
         

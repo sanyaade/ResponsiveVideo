@@ -101,6 +101,9 @@
 				aspectRatio = height/width;
 				
 				if (plugin.settings.scaleVideo) {
+					videoEl
+						.removeAttr('height')
+						.removeAttr('width');
 					width = $(videoEl).parent().width();
 					height = width * aspectRatio;
 				}

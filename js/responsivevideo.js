@@ -93,8 +93,11 @@
 					height = width * aspectRatio;
 				}
 				
-				videoEl.css('width','100%')
-				videoEl.css('height','auto');
+				videoEl
+					.css('width','100%')
+					.css('height','auto')
+					.css('padding','0')
+					.css('margin','0');
 				
 				videoEl.parent()
 					.css('height',videoEl.width() * aspectRatio)

@@ -101,6 +101,7 @@
 				
 				videoEl.parent()
 					.css('height',videoEl.width() * aspectRatio)
+					.css('padding','0')
 					.addClass('vidobject-container-'+voIndex);
 					
 				var flashvars = {
